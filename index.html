@@ -256,6 +256,33 @@
     background: var(--rule);
   }
 
+
+  /* ── HEADSHOT ── */
+  .headshot-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 2rem;
+  }
+
+  .headshot-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -8px -8px 8px 8px;
+    border: 1px solid var(--rule);
+    z-index: 0;
+  }
+
+  .headshot-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: block;
+    filter: grayscale(15%);
+    transition: filter 0.3s;
+  }
+  .headshot-img:hover { filter: grayscale(0%); }
+
   /* ── ABOUT ── */
   .about-grid {
     display: grid;
@@ -391,7 +418,7 @@
   /* ── PROJECTS ── */
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0;
     border: 1px solid var(--rule);
   }
@@ -405,8 +432,9 @@
     color: inherit;
     display: block;
   }
-  .project-card:nth-child(3n) { border-right: none; }
-  .project-card:nth-last-child(-n+3) { border-bottom: none; }
+  .project-card:nth-child(2n) { border-right: none; }
+  .project-card:nth-last-child(-n+2):nth-child(odd),
+  .project-card:last-child { border-bottom: none; }
   .project-card:hover { background: var(--accent-light); }
 
   .project-icon {
@@ -778,7 +806,7 @@
   </div>
   <div class="projects-grid">
 
-    <a class="project-card reveal" href="#" onclick="return false;">
+    <a class="project-card reveal" href="https://docs.google.com/presentation/d/15KAngiCIwi07KC2DZ2BRsNypo6BF8-t-28TvsPFDJYs/edit?usp=sharing" target="_blank">
       <span class="project-icon">🎬</span>
       <div class="project-category">Sports Marketing · ASU</div>
       <div class="project-title">OmniHat Agency — Carmelo Anthony Rebrand</div>
@@ -786,39 +814,31 @@
       <span class="project-link">View Deck →</span>
     </a>
 
-    <a class="project-card reveal" href="#" onclick="return false;">
-      <span class="project-icon">📊</span>
-      <div class="project-category">Account Strategy · 2025</div>
-      <div class="project-title">BuzzFeed Account Manager Presentation</div>
-      <p class="project-desc">Developed a comprehensive account manager presentation analyzing BuzzFeed's brand partnerships ecosystem, media strategy, and revenue model. Applied brand consulting frameworks to assess platform performance and strategic positioning.</p>
+    <a class="project-card reveal" href="https://docs.google.com/presentation/d/1uCTQEevv8-Ux-Tzn1-NC7SisEYJPrTrEKfxiiE8MsTE/edit?usp=sharing" target="_blank">
+      <span class="project-icon">🎙️</span>
+      <div class="project-category">Research & Strategy · USC Annenberg</div>
+      <div class="project-title">Respeecher — AI Voice Technology Exec Presentation</div>
+      <p class="project-desc">Developed an executive-facing presentation positioning Respeecher's AI voice synthesis technology for product launches and investor storytelling. Translated complex technical capabilities into clear, compelling narratives for Hollywood, broadcast, and sports clients.</p>
       <span class="project-link">View Deck →</span>
     </a>
 
-    <a class="project-card reveal" href="#" onclick="return false;">
-      <span class="project-icon">🌍</span>
-      <div class="project-category">Digital Strategy · Film</div>
-      <div class="project-title">House of Gucci — International Digital Strategy</div>
-      <p class="project-desc">Crafted an international digital marketing and publicity strategy for House of Gucci across key global territories, examining platform-specific approaches, talent amplification, and cross-market brand positioning for the film's release.</p>
-      <span class="project-link">View Deck →</span>
-    </a>
-
-    <a class="project-card reveal" href="#" onclick="return false;">
+    <a class="project-card reveal" href="https://docs.google.com/presentation/d/1bg6Zrr7tjPNjm9br6eourfLwEj1tCpd_TXOYdcyWXfI/edit?usp=sharing" target="_blank">
       <span class="project-icon">☕</span>
-      <div class="project-category">Brand Strategy · ASU</div>
-      <div class="project-title">Starbucks — Marketing Campaign Analysis</div>
-      <p class="project-desc">Analyzed Starbucks' integrated marketing strategy across earned, paid, and owned channels, assessing brand equity, campaign performance, and consumer positioning within the competitive premium coffee landscape.</p>
+      <div class="project-category">Organizational Comms · USC Annenberg</div>
+      <div class="project-title">Starbucks — Communications & Organizational Strategy</div>
+      <p class="project-desc">Analyzed Starbucks' internal communications challenges and organizational dynamics, applying strategic frameworks to assess cultural alignment, leadership messaging, and employee engagement across a global workforce.</p>
       <span class="project-link">View Deck →</span>
     </a>
 
-    <a class="project-card reveal" href="#" onclick="return false;">
+    <a class="project-card reveal" href="https://docs.google.com/document/d/1ryLGtupQkQvITFZhId3pfHHUL9lfK3KavpC0Ll-fBLs/edit?usp=sharing" target="_blank">
       <span class="project-icon">🏆</span>
       <div class="project-category">Academic Research · Honors Thesis</div>
       <div class="project-title">For Your Consideration — Academy Awards Campaigns</div>
-      <p class="project-desc">Barrett Honors College thesis examining the economics and strategy behind Oscar campaigns. Analyzed how studios, streamers, agencies, and talent invest in awards season — and why nominations and wins generate measurable added value across the entire entertainment ecosystem.</p>
+      <p class="project-desc">Barrett Honors College thesis co-authored with Amanda Kichler. Examines the full economics of Oscar campaigning — from the $3M–$60M budgets studios and streamers deploy, to the box office lift a nomination generates, to the gender gap in post-win salary increases. Also covers the \#OscarsSoWhite and \#MeToo movements and their structural impact on the Academy. Research included interviews with a CAA representative to validate industry arguments.</p>
       <span class="project-link">Read More →</span>
     </a>
 
-    <a class="project-card reveal" href="#" onclick="return false;">
+    <a class="project-card reveal" href="https://docs.google.com/presentation/d/1I6Hr4a-XtQBRPbAvujns5hppM94xRBbGrw7zyIMiskE/edit?usp=sharing" target="_blank">
       <span class="project-icon">🛍️</span>
       <div class="project-category">Brand Consulting · ASU</div>
       <div class="project-title">JCPenney — Brand Repositioning</div>
@@ -826,10 +846,17 @@
       <span class="project-link">View Deck →</span>
     </a>
 
+    <a class="project-card reveal" href="https://docs.google.com/presentation/d/1iqQ2Qe7X0I_jjhbIfUVLD_p1zDqNHOefQYN6r5-8z18/edit?usp=sharing" target="_blank">
+      <span class="project-icon">📐</span>
+      <div class="project-category">Brand Strategy · USC Annenberg <span style="color:var(--accent);">*</span></div>
+      <div class="project-title">XCEL — Brand & Communications Strategy</div>
+      <p class="project-desc">Group strategy project analyzing XCEL's brand positioning, communications framework, and growth opportunities. Full deck design — layout, visual identity, typography, and slide architecture — completed entirely independently.</p>
+      <p style="font-size:0.72rem; color:var(--accent); margin-top:0.6rem; font-style:italic;">* Deck design by Benjamin Gruca. Content developed collaboratively.</p>
+      <span class="project-link">View Deck →</span>
+    </a>
+
   </div>
-  <p style="font-size:0.75rem; color:var(--warm-gray); text-align:center; margin-top:1.5rem; letter-spacing:0.05em;">
-    ↑ Replace <code style="background:var(--accent-light); padding:0.1rem 0.3rem;">href="#"</code> on each card with your Google Drive share links.
-  </p>
+
 </section>
 
 <!-- CONTACT -->
@@ -839,8 +866,8 @@
       <h2 class="contact-headline">Let's work<br/><em>together.</em></h2>
       <p class="contact-sub">Open to brand consulting, account management, and communications roles in entertainment and sports.</p>
       <div class="contact-links">
-        <a class="contact-link" href="mailto:benjamingruca@gmail.com">
-          <span>benjamingruca@gmail.com</span>
+        <a class="contact-link" href="/cdn-cgi/l/email-protection#81e3e4efebe0ece8efe6f3f4e2e0c1e6ece0e8edafe2eeec">
+          <span><span class="__cf_email__" data-cfemail="dfbdbab1b5beb2b6b1b8adaabcbe9fb8b2beb6b3f1bcb0b2">[email&#160;protected]</span></span>
           <span class="contact-link-label">Email</span>
         </a>
         <a class="contact-link" href="https://www.linkedin.com/in/bgruca/" target="_blank">
@@ -851,7 +878,7 @@
           <span>(815) 685-5035</span>
           <span class="contact-link-label">Phone</span>
         </a>
-        <a class="contact-link" href="#" onclick="window.print(); return false;">
+        <a class="contact-link" href="Benjamin_Gruca_Resume_CAA_v2.pdf" target="_blank">
           <span>Download Resume</span>
           <span class="contact-link-label">PDF</span>
         </a>
@@ -870,19 +897,8 @@
   <span>Los Angeles, CA · USC Annenberg · CAA Alumni</span>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 80);
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => io.observe(el));
-</script>
-
-</body>
-</html>
+    entries.forEach((e
